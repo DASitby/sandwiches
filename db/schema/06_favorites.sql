@@ -1,4 +1,4 @@
--- Drop and recreate Messages table (Example)
+-- Drop and recreate Favorites table (Example)
 
 DROP TABLE IF EXISTS favorites CASCADE;
 CREATE TABLE favorites (
