@@ -10,3 +10,22 @@
   align-items: center;
   margin-top: 100px;
 }
+
+.header-image-container {
+  padding-top: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header-image {
+  border-radius: 4em;
+  height: 21em;
+  width: 38em;
+}
+
+.header-image:hover {
+  box-shadow: 0.3rem 0.3rem #324f3c;
+  filter: brightness(90%);
+}
