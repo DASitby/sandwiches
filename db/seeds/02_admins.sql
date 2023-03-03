@@ -198,4 +198,4 @@
     INSERT INTO admins (
     name, email, password)
     VALUES (
-    'Jerome Freeman', 'rileymay@gmail.com', 12345678902a$10$FB/BOAVhpuLvpOREQVmvmezD4ED/.JBIDRh70tGevYzYzQgFId2u.');
+    'Jerome Freeman', 'rileymay@gmail.com', 1234567890);
