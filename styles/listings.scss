@@ -7,5 +7,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
+}
+
+.tweets-container {
+  border: green solid;
+  padding-block: 4em;
+  width: 25%;
+  margin-inline: 2em;
 }
