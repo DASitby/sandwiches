@@ -1,5 +1,4 @@
 .listings-container-row {
-  border: 3px solid blue;
   padding-block: 1.5em;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -11,7 +10,8 @@
 }
 
 .listings-container {
-  border: green solid;
+  color: #324f3c;
+  border: 4px #324f3c solid;
   padding-block: 4em;
   width: 25%;
   margin-inline: 2em;
@@ -19,4 +19,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.listings-container:hover {
+  box-shadow: 0.3rem 0.3rem #939393;
 }
