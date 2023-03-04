@@ -1,0 +1,26 @@
+.listings-container-row {
+  padding-block: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.listings-container {
+  color: #324f3c;
+  border: 4px #324f3c solid;
+  padding-block: 4em;
+  width: 25%;
+  margin-inline: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.listings-container:hover {
+  box-shadow: 0.3rem 0.3rem #939393;
+}
