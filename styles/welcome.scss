@@ -33,3 +33,27 @@ hr {
   margin: auto;
   width: 50%;
 }
+
+.welcome-button {
+  display:inline-block;
+  padding: 0.5em 2em;
+  border: 0.2em solid #e0e0e0;
+  margin-bottom: 2em;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:"Bebas Neue";
+  font-size: 0.8em;
+  color:#e0e0e0;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.welcome-button:hover {
+  color:#324f3c;
+  background-color:#a1c5a6;
+}
+
+footer a {
+  margin-inline: 0.5em;
+}
