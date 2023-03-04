@@ -47,7 +47,7 @@ app.use('/listings', listingsRoutes);
 // Separate them into separate routes files (see above).
 
 app.get('/', (req, res) => {
-  res.redirect('/listings');
+  res.render('welcome');
 });
 
 app.listen(PORT, () => {
