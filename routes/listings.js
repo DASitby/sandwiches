@@ -7,9 +7,15 @@
 
 const express = require('express');
 const router  = express.Router();
+const { getListings } = require('../db/queries/listings');
 
 router.get('/', (req, res) => {
-  res.render('index');
+  getListings()
+    .then((listings) => {
+      const templateVars = { listings: listings };
+      res.render('index', templateVars);
+    });
+
 });
 
 module.exports = router;
