@@ -7,12 +7,13 @@
 
 const express = require('express');
 const router  = express.Router();
-const { getListings } = require('../db/queries/listings');
+const { getSandwich } = require('../db/queries/product');
 
-router.get('/', (req, res) => {
-  getListings()
-    .then((listings) => {
-      const templateVars = { listings: listings };
+router.get('/:id', (req, res) => {
+  const sandwich = req.params.id;
+  getSandwich(sandwich)
+    .then((sandwich) => {
+      const templateVars = { sandwich: sandwich };
       res.render('index', templateVars);
     });
 
