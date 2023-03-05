@@ -16,4 +16,14 @@
   width: 90%;
   height: 45em;
   margin-top: 4.1em;
+  display: flex;
+  flex-direction: row;
+}
+
+.product-image-container {
+  border: 5px solid blue;
+}
+
+.product-description-container {
+  border: 1px solid red;
 }
