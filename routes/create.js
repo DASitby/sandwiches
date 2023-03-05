@@ -7,7 +7,7 @@
 
 const express = require('express');
 const router  = express.Router();
-const { createListing } = require('../db/queries/create');
+const { createListing } = require('../db/queries/01_create');
 
 router.get('/', (req, res) => {
   res.render('create');
