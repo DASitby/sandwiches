@@ -13,8 +13,8 @@ router.get('/:id', (req, res) => {
   const sandwichID = req.params.id;
   getSandwich(sandwichID)
     .then((sandwich) => {
-      const templateVars = { sandwich: sandwich[0] };
-      res.render('index', templateVars);
+      const templateVars = { sandwich: sandwich[0]};
+      res.render('product', templateVars);
     });
 
 });
