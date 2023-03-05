@@ -53,7 +53,28 @@
         <img src=<%= sandwich.thumbnail_url %>></img>
       </section>
       <section class="product-description-container">
-
+        <ul>
+          <td><span style="color: #e0e0e0">TITLE: </span><%= sandwich.title %></td><br>
+          <td><span style="color: #e0e0e0">DESCRIPTION: </span><%= sandwich.description %></td><br>
+          <td><span style="color: #e0e0e0">SIZE: </span><%= sandwich.size %></td><br>
+          <td><span style="color: #e0e0e0">GLUTEN FREE: </span>
+            <% if (sandwich.gluten_free === true) { %>
+              YES
+            <% } else { %>
+              NO
+            <% } %>
+          </td><br>
+          <td><span style="color: #e0e0e0">VEGETARIAN: </span>
+           <% if (sandwich.vegetarian === true) { %>
+            YES
+          <% } else { %>
+            NO
+          <% } %>
+          </td><br>
+          <td><span style="color: #e0e0e0">PROTEIN: </span><%= sandwich.protein %></td><br>
+          <td><span style="color: #e0e0e0">BREAD: </span><%= sandwich.bread_type %></td><br>
+          <td><span style="color: #e0e0e0">PRICE: </span>$<%= sandwich.price / 100%></td>
+        </ul>
       </section>
     </div>
   </body>
