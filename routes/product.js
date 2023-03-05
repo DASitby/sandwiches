@@ -7,7 +7,7 @@
 
 const express = require('express');
 const router  = express.Router();
-const { getSandwich } = require('../db/queries/product');
+const { getSandwich } = require('../db/queries/03_product');
 
 router.get('/:id', (req, res) => {
   const sandwichID = req.params.id;

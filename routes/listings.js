@@ -7,7 +7,7 @@
 
 const express = require('express');
 const router  = express.Router();
-const { getListings } = require('../db/queries/listings');
+const { getListings } = require('../db/queries/02_listings');
 
 router.get('/', (req, res) => {
   getListings()
