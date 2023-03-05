@@ -12,18 +12,34 @@
 
 .product-container {
   color: #324f3c;
-  border: 0.5em solid #e0e0e0;
-  width: 90%;
+  border: 0.5em solid #324f3c;
+  width: 75%;
   height: 45em;
   margin-top: 4.1em;
   display: flex;
   flex-direction: row;
+  border-radius: 5em;
 }
 
 .product-image-container {
-  border: 5px solid blue;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 35em;
+    width: 35em;
+    border-radius: 5em;
+  }
+
+  img:hover {
+    box-shadow: 0.3rem 0.3rem #324f3c;
+    filter: brightness(90%);
+    transition: all 0.3s;
+  }
 }
 
 .product-description-container {
-  border: 1px solid red;
+  width: 40%;
 }
