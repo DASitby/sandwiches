@@ -15,7 +15,11 @@ router.get('/', (req, res) => {
       const templateVars = { listings: listings };
       res.render('index', templateVars);
     });
+});
 
+router.post('/', (req, res) => {
+  console.log(req.body);
+  res.redirect('/listings');
 });
 
 module.exports = router;
