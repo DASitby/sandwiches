@@ -10,10 +10,10 @@ const router  = express.Router();
 const { getSandwich } = require('../db/queries/product');
 
 router.get('/:id', (req, res) => {
-  const sandwich = req.params.id;
-  getSandwich(sandwich)
+  const sandwichID = req.params.id;
+  getSandwich(sandwichID)
     .then((sandwich) => {
-      const templateVars = { sandwich: sandwich };
+      const templateVars = { sandwich: sandwich[0] };
       res.render('index', templateVars);
     });
 
