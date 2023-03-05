@@ -30,9 +30,12 @@
 .nav-menu-buttons {
   font-size: 1.4em;
   margin-right: 2em;
+  background: none;
+  color: #e0e0e0;
+  border: none;
 }
 
-.nav-menu-buttons span:hover {
+.nav-menu-buttons:hover {
   color: #a1c5a6;
 }
 

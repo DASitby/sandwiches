@@ -38,12 +38,20 @@
     <div>
       <span class="nav-title">WE ONLY SELL SANDWICHES DOT COM 🍞</span>
     </div>
-    <footer class="nav-menu-buttons">
-      <span>CREATE LISTING</span>
-      <span>MY LISTINGS</span>
-      <span>MY SALES</span>
-      <span>SEARCH</span>
-    </footer>
+    <!-- if statement to check for admin -->
+      <form method="" action="">
+        <button type="submit" class="nav-menu-buttons">CREATE LISTING</button>
+        <button type="submit" class="nav-menu-buttons">MY LISTINGS</button>
+        <button type="submit" class="nav-menu-buttons">MY SALES</button>
+        <button type="submit" class="nav-menu-buttons">SEARCH</button>
+      </form>
+  <!-- else statement for user goes here -->
+      <form method="" action="">
+        <button type="submit" class="nav-menu-buttons">FAVOURITES</button>
+        <button type="submit" class="nav-menu-buttons">MESSAGES</button>
+        <button type="submit" class="nav-menu-buttons">SEARCH</button>
+      </form>
+  <!-- finish bracket here -->
   </nav>
 
   <!-- main product container -->
