@@ -13,7 +13,4 @@ router.get('/', (req, res) => {
   res.render('create');
 });
 
-router.post('/', (req, res) => {
-  console.log(req.body);
-});
 module.exports = router;
