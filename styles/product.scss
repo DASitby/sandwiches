@@ -1,0 +1,29 @@
+.product-main {
+  width: 100%;
+  background-color: #a1c5a6;
+  color: #FFFFFF;
+  top: 0;
+  font-family: "Bebas Neue";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.product-container {
+  color: #324f3c;
+  border: 0.5em solid #e0e0e0;
+  width: 90%;
+  height: 45em;
+  margin-top: 4.1em;
+  display: flex;
+  flex-direction: row;
+}
+
+.product-image-container {
+  border: 5px solid blue;
+}
+
+.product-description-container {
+  border: 1px solid red;
+}

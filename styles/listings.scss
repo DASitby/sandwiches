@@ -1,5 +1,4 @@
 .listings-container-row {
-  padding-block: 1.5em;
   margin-top: 2em;
   margin-bottom: 2em;
   width: 100%;
@@ -11,19 +10,37 @@
 
 .listings-container {
   color: #324f3c;
-  border: 4px #324f3c solid;
-  padding-block: 4em;
-  width: 25%;
+  width: 27%;
   margin-inline: 2em;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-height: 20em;
+  border-radius: 6em;
+
+  img {
+    height: 12em;
+    width: 12em;
+    border-radius: 3em;
+    margin-bottom: 2em;
+    border: 0.2em solid #324f3c;
+  }
+
+  span {
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .listings-container:hover {
   transition: all 0.3s;
-  box-shadow: 0.3rem 0.3rem #939393;
+  box-shadow: 0.2rem 0.2rem #939393;
+  background: #a1c5a6;
 }
 
 .listings-more-button {

@@ -25,7 +25,7 @@ const createListing = (listing) => {
       listing.size,
       listing.bread_type,
       listing.protein,
-      (listing.price * 100),
+      listing.price,
       listing.thumbnail_url])
     .then(data => {
       return data.rows;

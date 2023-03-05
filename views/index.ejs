@@ -56,47 +56,21 @@
 
   <!-- main content container -->
   <main>
-    <div class="listings-container-row">
-      <div class="listings-container">
-          <h1>IMAGE FOR SANDWICH</h1>
-          <span>TITLE AND SELLER NAME</span>
-      </div>
-      <div class="listings-container">
-        <h1>IMAGE FOR SANDWICH</h1>
-        <span>TITLE AND SELLER NAME</span>
-      </div>
-      <div class="listings-container">
-        <h1>IMAGE FOR SANDWICH</h1>
-        <span>TITLE AND SELLER NAME</span>
-      </div>
-    </div>
-    <div class="listings-container-row">
-      <div class="listings-container">
-        <h1>IMAGE FOR SANDWICH</h1>
-        <span>TITLE AND SELLER NAME</span>
-      </div>
-      <div class="listings-container">
-        <h1>IMAGE FOR SANDWICH</h1>
-        <span>TITLE AND SELLER NAME</span>
-      </div>
-      <div class="listings-container">
-        <h1>IMAGE FOR SANDWICH</h1>
-        <span>TITLE AND SELLER NAME</span>
-      </div>
-    </div>
-    <div class="listings-container-row">
-      <div class="listings-container">
-        <h1>IMAGE FOR SANDWICH</h1>
-        <span>TITLE AND SELLER NAME</span>
-      </div>
-      <div class="listings-container">
-        <h1>IMAGE FOR SANDWICH</h1>
-        <span>TITLE AND SELLER NAME</span>
-      </div>
-      <div class="listings-container">
-        <h1>IMAGE FOR SANDWICH</h1>
-        <span>TITLE AND SELLER NAME</span>
-      </div>
+        <% for (let i = 0; i < listings.length; i++) { %>
+         <% if (i === 0 || i === 3 || i === 6) { %>
+            <div class="listings-container-row">
+         <% } %>
+
+          <div class="listings-container">
+            <img src=<%= listings[i].thumbnail_url %>></img>
+            <span>SANDWICH: <%= listings[i].title %></span>
+            <span>SELLER: <%= listings[i].seller %></span>
+          </div>
+
+          <% if (i === 2 || i === 5 || i === 8) { %>
+            </div>
+          <% } %>
+        <% } %>
     </div>
 
     <footer>
