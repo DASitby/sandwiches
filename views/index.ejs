@@ -69,7 +69,7 @@
             <div class="listings-container-row">
          <% } %>
 
-          <div class="listings-container">
+          <div class="listings-container" style="cursor: pointer;" onclick="window.location='/listings/<%= listings[i].id %>';">
             <img src=<%= listings[i].thumbnail_url %>></img>
             <span>SANDWICH: <%= listings[i].title %></span>
             <span>SELLER: <%= listings[i].seller %></span>
