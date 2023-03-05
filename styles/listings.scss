@@ -19,6 +19,10 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  img {
+    height: 9em;
+    width: 9em;
+  }
 }
 
 .listings-container:hover {
