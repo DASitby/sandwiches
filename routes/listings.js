@@ -12,7 +12,7 @@ const { getListings } = require('../db/queries/02_listings');
 router.get('/', (req, res) => {
   getListings()
     .then((listings) => {
-      const templateVars = { listings: listings };
+      const templateVars = { listings: listings, cookie: req.headers.cookie};
       res.render('index', templateVars);
     });
 });

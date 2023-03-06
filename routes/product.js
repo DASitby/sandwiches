@@ -13,7 +13,7 @@ router.get('/:id', (req, res) => {
   const sandwichID = req.params.id;
   getSandwich(sandwichID)
     .then((sandwich) => {
-      const templateVars = { sandwich: sandwich[0]};
+      const templateVars = { sandwich: sandwich[0], cookie: req.headers.cookie};
       res.render('product', templateVars);
     });
 
