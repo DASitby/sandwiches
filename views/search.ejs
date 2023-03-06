@@ -38,22 +38,22 @@
   <!-- main product container -->
     <body class="product-main">
       <div class="search-container">
-        <form>
+        <form action="/listings/" method="POST">
           <label>SIZE:</label>
             <select name="size" id="size">
               <option value="S">S</option>
               <option value="M">M</option>
               <option value="L">L</option>
             </select>
-          <label>GLUTEN:</label>
-            <select name="size" id="size">
-              <option value="S">TRUE</option>
-              <option value="M">FALSE</option>
+          <label>GLUTEN FREE:</label>
+            <select name="gluten_free" id="gluten_free">
+              <option value="TRUE">TRUE</option>
+              <option value="FALSE">FALSE</option>
             </select>
           <label>VEGETARIAN:</label>
-            <select name="size" id="size">
-              <option value="S">TRUE</option>
-              <option value="M">FALSE</option>
+            <select name="vegetarian" id="vegetarian">
+              <option value="TRUE">TRUE</option>
+              <option value="FALSE">FALSE</option>
             </select>
           <label for="fname">BREAD:</label>
           <input type="text" id="fname" name="fname">
@@ -63,12 +63,12 @@
           <input type="text" id="fname" name="fname">
           <label for="fname">MAX PRICE:</label>
           <input type="text" id="fname" name="fname">
-        </form>
-      </div>
-      <span>*bread and protein will default to chicken and sliced*</span>
-      <footer>
-        <a href="" class="search-button">SUBMIT</a>
-      </footer>
+        </div>
+        <span>*bread and protein will default to chicken and sliced*</span>
+        <footer>
+          <button type="submit" class="search-button">SUBMIT QUERY</button>
+        </footer>
+      </form>
     </body>
 </body>
 
