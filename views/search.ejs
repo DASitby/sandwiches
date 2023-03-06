@@ -41,30 +41,75 @@
         <form action="/listings/" method="POST">
           <label>SIZE:</label>
             <select name="size" id="size">
+              <option > </option>
               <option value="S">S</option>
               <option value="M">M</option>
               <option value="L">L</option>
             </select>
           <label>GLUTEN FREE:</label>
             <select name="gluten_free" id="gluten_free">
-              <option value="TRUE">TRUE</option>
+              <option > </option>
               <option value="FALSE">FALSE</option>
+              <option value="TRUE">TRUE</option>
             </select>
           <label>VEGETARIAN:</label>
             <select name="vegetarian" id="vegetarian">
-              <option value="TRUE">TRUE</option>
+              <option > </option>
               <option value="FALSE">FALSE</option>
+              <option value="TRUE">TRUE</option>
             </select>
-          <label for="fname">BREAD:</label>
-          <input type="text" id="fname" name="fname">
-          <label for="fname">PROTEIN:</label>
-          <input type="text" id="fname" name="fname">
-          <label for="fname">MIN PRICE:</label>
-          <input type="text" id="fname" name="fname">
-          <label for="fname">MAX PRICE:</label>
-          <input type="text" id="fname" name="fname">
+          <label>BREAD:</label>
+            <select name="bread" id="bread">
+              <option > </option>
+              <option value="sliced">SLICED</option>
+              <option value="ciabatta">CIABATTA</option>
+              <option value="sub">SUB</option>
+            </select>
+          <label>PROTEIN:</label>
+            <select name="protein" id="protein">
+              <option > </option>
+              <option value="beef">BEEF</option>
+              <option value="chicken">CHICKEN</option>
+              <option value="meatball">MEATBALL</option>
+              <option value="tofu">TOFU</option>
+            </select>
+          <label>MIN PRICE:</label>
+            <select name="min_price" id="min_price">
+              <option > </option>
+              <option value="100">$1.00</option>
+              <option value="200">$2.00</option>
+              <option value="300">$3.00</option>
+              <option value="400">$4.00</option>
+              <option value="500">$5.00</option>
+              <option value="600">$6.00</option>
+              <option value="700">$7.00</option>
+              <option value="800">$8.00</option>
+              <option value="900">$9.00</option>
+              <option value="1000">$10.00</option>
+              <option value="1100">$11.00</option>
+              <option value="1200">$12.00</option>
+              <option value="1300">$13.00</option>
+              <option value="1400">$14.00</option>
+            </select>
+          <label>MAX PRICE:</label>
+            <select name="max_price" id="max_price">
+              <option > </option>
+              <option value="100">$1.00</option>
+              <option value="200">$2.00</option>
+              <option value="300">$3.00</option>
+              <option value="400">$4.00</option>
+              <option value="500">$5.00</option>
+              <option value="600">$6.00</option>
+              <option value="700">$7.00</option>
+              <option value="800">$8.00</option>
+              <option value="900">$9.00</option>
+              <option value="1000">$10.00</option>
+              <option value="1100">$11.00</option>
+              <option value="1200">$12.00</option>
+              <option value="1300">$13.00</option>
+              <option value="1400">$14.00</option>
+            </select>
         </div>
-        <span>*bread and protein will default to chicken and sliced*</span>
         <footer>
           <button type="submit" class="search-button">SUBMIT</button>
         </footer>

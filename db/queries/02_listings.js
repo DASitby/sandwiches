@@ -22,6 +22,22 @@ const getListings = (options = {}) => {
         console.log(err.message);
       });
   }
+  //Favorites Button
+  if (options.user_id) {
+    queryParams.push(options.user_id);
+    queryString += `
+    JOIN favorites ON listing_id = listings.id
+    WHERE  favorites.user_id = $${queryParams.length}
+    ORDER BY RANDOM()
+    LIMIT 9`;
+    return db.query(queryString, queryParams)
+      .then(data => {
+        return data.rows;
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }
 
   const checkWhere = (string) => {
     if (string.length === 117) {
@@ -49,6 +65,32 @@ const getListings = (options = {}) => {
     queryString += ` vegetarian = $${queryParams.length} `;
   }
 
+  if (options.bread_type) {
+    queryParams.push(`${options.vegetarian}`);
+    checkWhere(queryString);
+    queryString += ` bread_type = $${queryParams.length} `;
+  }
+
+  if (options.protein) {
+    queryParams.push(`${options.protein}`);
+    checkWhere(queryString);
+    queryString += ` protein = $${queryParams.length} `;
+  }
+
+  if (options.min_price && options.max_price) {
+    queryParams.push(`${options.min_price}`);
+    queryParams.push(`${options.max_price}`);
+    checkWhere(queryString);
+    queryString += ` price BETWEEN $${queryParams.length - 1} and $${queryParams.length}`;
+  } else if (options.min_price) {
+    queryParams.push(`${options.min_price}`);
+    checkWhere(queryString);
+    queryString += ` price > $${queryParams.length}`;
+  } else if (options.max_price) {
+    queryParams.push(`${options.max_price}`);
+    checkWhere(queryString);
+    queryString += ` price < $${queryParams.length}`;
+  }
   queryString += `ORDER BY RANDOM()
   LIMIT 9`;
   return db.query(queryString, queryParams)

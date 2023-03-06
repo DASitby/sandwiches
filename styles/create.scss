@@ -38,6 +38,24 @@ span {
   font-size: 1.4em;
 }
 
+select {
+  display: block;
+  margin: 0 auto;
+  width: 7em;
+  color: #e0e0e0;
+  border: none;
+  background: #324f3c;
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  width: 7em;
+  color: #e0e0e0;
+  border: none;
+  background: #324f3c;
+}
+
 .create-button:hover {
   color:#324f3c;
   background-color:#e0e0e0;

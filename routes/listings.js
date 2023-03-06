@@ -34,6 +34,18 @@ router.post('/', (req, res) => {
   } else if (req.body.vegetarian === 'FALSE') {
     options.vegetarian = false;
   }
+  if (req.body.bread_type) {
+    options.bread_type = req.body.bread_type;
+  }
+  if (req.body.protein) {
+    options.protein = req.body.protein;
+  }
+  if (req.body.min_price) {
+    options.min_price = req.body.min_price;
+  }
+  if (req.body.max_price) {
+    options.max_price = req.body.max_price;
+  }
   getListings(options)
     .then((listings) => {
       const templateVars = { listings: listings, cookie: req.headers.cookie};
