@@ -42,7 +42,18 @@ select {
   display: block;
   margin: 0 auto;
   width: 7em;
-  color: #5b5b5b;
+  color: #e0e0e0;
+  border: none;
+  background: #324f3c;
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  width: 7em;
+  color: #e0e0e0;
+  border: none;
+  background: #324f3c;
 }
 
 .search-button:hover {
