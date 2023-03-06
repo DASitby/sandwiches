@@ -3,18 +3,15 @@
   <div>
     <span class="nav-title" style="cursor: pointer;" onclick="window.location='/listings/';">WE ONLY SELL SANDWICHES DOT COM 🍞</span>
   </div>
+  <div>
   <% if (cookie.includes('admin=true')) { %>
-    <form method="" action="">
       <button class="nav-menu-buttons" onclick="window.location='/create/';">CREATE LISTING</button>
       <button type="submit" class="nav-menu-buttons">MY LISTINGS</button>
       <button type="submit" class="nav-menu-buttons">MY SALES</button>
-      <button type="submit" class="nav-menu-buttons">SEARCH</button>
-    </form>
     <% } else { %>
-    <form method="" action="">
       <button type="submit" class="nav-menu-buttons">FAVOURITES</button>
       <button type="submit" class="nav-menu-buttons">MESSAGES</button>
-      <button type="submit" class="nav-menu-buttons" onclick="window.location='/search/';">SEARCH</button>
-    </form>
     <% } %>
-</nav>
+      <button type="submit" class="nav-menu-buttons" onclick="window.location='/search/';">SEARCH</button>
+    </div>
+    </nav>
