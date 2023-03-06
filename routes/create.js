@@ -7,10 +7,10 @@
 
 const express = require('express');
 const router  = express.Router();
-const { createListing } = require('../db/queries/01_create');
 
 router.get('/', (req, res) => {
-  res.render('create');
+  const templateVars = {cookie: req.headers.cookie};
+  res.render('create', templateVars);
 });
 
 module.exports = router;

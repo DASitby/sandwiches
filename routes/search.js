@@ -9,7 +9,8 @@ const express = require('express');
 const router  = express.Router();
 
 router.get('/', (req, res) => {
-  res.render('search');
+  const templateVars = {cookie: req.headers.cookie};
+  res.render('search', templateVars);
 });
 
 module.exports = router;
