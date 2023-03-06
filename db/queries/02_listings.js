@@ -8,8 +8,8 @@ const getListings = (options = {}) => {
   JOIN admins on admins.id = admin_id
   `;
   //My Listings button
-  if (options.mine) {
-    queryParams.push(1);
+  if (options.admin_id) {
+    queryParams.push(options.admin_id);
     queryString += `
     WHERE listings.admin_id = $${queryParams.length}
     ORDER BY RANDOM()
