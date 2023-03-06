@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Main</title>
+
+  <meta charset="UTF-8" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+  <!-- External Font CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/nav.css" />
+  <link rel="stylesheet" href="/styles/header.css" />
+  <link rel="stylesheet" href="/styles/listings.css" />
+  <link rel="stylesheet" href="/styles/product.css" />
+  <link rel="stylesheet" href="/styles/search.css" />
+
+  <script src="/vendor/jquery-3.0.0.js"></script>
+  <script defer src="/scripts/app.js"></script>
+</head>
+
+  <!-- Icons CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- HTML page content -->
+<body>
+  <%- include('partials/_nav') %>
+
+  <!-- main product container -->
+    <body class="product-main">
+      <div class="search-container">
+        <form>
+          <label>SIZE:</label>
+            <select name="size" id="size">
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+            </select>
+          <label>GLUTEN:</label>
+            <select name="size" id="size">
+              <option value="S">TRUE</option>
+              <option value="M">FALSE</option>
+            </select>
+          <label>VEGETARIAN:</label>
+            <select name="size" id="size">
+              <option value="S">TRUE</option>
+              <option value="M">FALSE</option>
+            </select>
+          <label for="fname">BREAD:</label>
+          <input type="text" id="fname" name="fname">
+          <label for="fname">PROTEIN:</label>
+          <input type="text" id="fname" name="fname">
+          <label for="fname">MIN PRICE:</label>
+          <input type="text" id="fname" name="fname">
+          <label for="fname">MAX PRICE:</label>
+          <input type="text" id="fname" name="fname">
+        </form>
+      </div>
+      <span>*bread and protein will default to chicken and sliced*</span>
+      <footer>
+        <a href="" class="search-button">SUBMIT</a>
+      </footer>
+    </body>
+</body>
+
+</html>
