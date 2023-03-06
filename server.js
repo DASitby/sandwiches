@@ -36,6 +36,7 @@ const productRoutes = require('./routes/product');
 const createRoutes = require('./routes/create');
 const searchRoutes = require('./routes/search');
 const myListingsRoutes = require('./routes/mine');
+const favoritesRoutes = require('./routes/favorites');
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -48,6 +49,7 @@ app.use('/listings/', productRoutes);
 app.use('/create', createRoutes);
 app.use('/search', searchRoutes);
 app.use('/mine', myListingsRoutes);
+app.use('/favorites', favoritesRoutes);
 // Note: mount other resources here, using the same pattern above
 
 // Home page
