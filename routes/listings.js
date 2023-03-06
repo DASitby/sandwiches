@@ -21,6 +21,9 @@ router.post('/', (req, res) => {
   console.log("search ",req.body);
   //Search options constructor:
   const options = {};
+  if (req.headers.cookie.admin_id) {
+    options.admin_id = req.headers.cookie.admin_id;
+  }
   if (req.body.size) {
     options.size = req.body.size;
   }

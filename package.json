@@ -21,7 +21,6 @@
     "sass": "^1.35.1"
   },
   "devDependencies": {
-    "cookie-session": "^2.0.0",
     "nodemon": "^2.0.10"
   }
 }
