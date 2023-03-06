@@ -5,9 +5,9 @@
   </div>
   <div>
   <% if (cookie.includes('admin=true')) { %>
-      <button class="nav-menu-buttons" onclick="window.location='/create/';">CREATE LISTING</button>
-      <button type="submit" class="nav-menu-buttons">MY LISTINGS</button>
-      <button type="submit" class="nav-menu-buttons">MY SALES</button>
+      <button style="cursor: pointer;"class="nav-menu-buttons" onclick="window.location='/create/';">CREATE LISTING</button>
+      <button style="cursor: pointer;" class="nav-menu-buttons" onclick="window.location='/mine/';">MY LISTINGS</button>
+      <button style="cursor: pointer;" class="nav-menu-buttons">MY SALES</button>
     <% } else { %>
       <button type="submit" class="nav-menu-buttons">FAVOURITES</button>
       <button type="submit" class="nav-menu-buttons">MESSAGES</button>
