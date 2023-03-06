@@ -6,10 +6,10 @@ const getListings = (options = {}) => {
   let queryString = `SELECT listings.id, title, admins.name as seller, thumbnail_url
   FROM listings
   JOIN admins on admins.id = admin_id
-  ORDER BY RANDOM()`;
+  `;
 
   const checkWhere = (string) => {
-    if (string.includes('WHERE')) {
+    if (string.length === 117) {
       queryString += 'WHERE';
     } else {
       queryString += 'and';
@@ -19,22 +19,23 @@ const getListings = (options = {}) => {
   if (options.size) {
     queryParams.push(`${options.size}`);
     checkWhere(queryString);
-    queryString += `size = $${queryParams.length}`;
+    queryString += ` size = $${queryParams.length} `;
   }
 
-  if (options.gluten_free) {
+  if (options.gluten_free === true || options.gluten_free === false) {
     queryParams.push(`${options.gluten_free}`);
     checkWhere(queryString);
-    queryString += `gluten_free = $${queryParams.length}`;
+    queryString += ` gluten_free = $${queryParams.length} `;
   }
 
-  if (options.vegetarian) {
+  if (options.vegetarian === true || options.vegetarian === false) {
     queryParams.push(`${options.vegetarian}`);
     checkWhere(queryString);
-    queryString += `vegetarian = $${queryParams.length}`;
+    queryString += ` vegetarian = $${queryParams.length} `;
   }
 
-  queryString += `LIMIT 9`;
+  queryString += `ORDER BY RANDOM()
+  LIMIT 9`;
   return db.query(queryString, queryParams)
     .then(data => {
       return data.rows;
