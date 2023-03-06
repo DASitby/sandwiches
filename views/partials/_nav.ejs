@@ -3,18 +3,18 @@
   <div>
     <span class="nav-title" style="cursor: pointer;" onclick="window.location='/listings/';">WE ONLY SELL SANDWICHES DOT COM 🍞</span>
   </div>
-  <!-- if statement to check for admin -->
+  <% if (cookie.includes('admin=true')) { %>
     <form method="" action="">
-      <button type="submit" class="nav-menu-buttons">CREATE LISTING</button>
+      <button class="nav-menu-buttons" onclick="window.location='/create/';">CREATE LISTING</button>
       <button type="submit" class="nav-menu-buttons">MY LISTINGS</button>
       <button type="submit" class="nav-menu-buttons">MY SALES</button>
       <button type="submit" class="nav-menu-buttons">SEARCH</button>
     </form>
-<!-- else statement for user goes here -->
+    <% } else { %>
     <form method="" action="">
       <button type="submit" class="nav-menu-buttons">FAVOURITES</button>
       <button type="submit" class="nav-menu-buttons">MESSAGES</button>
       <button type="submit" class="nav-menu-buttons">SEARCH</button>
     </form>
-<!-- finish bracket here -->
+    <% } %>
 </nav>
