@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="/styles/listings.css" />
   <link rel="stylesheet" href="/styles/product.css" />
   <link rel="stylesheet" href="/styles/search.css" />
+  <link rel="stylesheet" href="/styles/create.css" />
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
@@ -37,38 +38,40 @@
 
   <!-- main product container -->
     <body class="product-main">
-      <div class="search-container">
-        <form action="/listings/" method="POST">
+      <div class="create-container">
+        <form>
+          <label for="fname">TITLE:</label>
+          <input type="text" id="fname" name="fname" required>
+          <label for="fname">DESCRIPTION:</label>
+          <input type="text" id="fname" name="fname" required>
           <label>SIZE:</label>
+          <select name="size" id="size">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+          </select>
+          <label>GLUTEN:</label>
             <select name="size" id="size">
-              <option value="S">S</option>
-              <option value="M">M</option>
-              <option value="L">L</option>
-            </select>
-          <label>GLUTEN FREE:</label>
-            <select name="gluten_free" id="gluten_free">
               <option value="TRUE">TRUE</option>
               <option value="FALSE">FALSE</option>
             </select>
           <label>VEGETARIAN:</label>
-            <select name="vegetarian" id="vegetarian">
+            <select name="size" id="size">
               <option value="TRUE">TRUE</option>
               <option value="FALSE">FALSE</option>
             </select>
           <label for="fname">BREAD:</label>
-          <input type="text" id="fname" name="fname">
+          <input type="text" id="fname" name="fname" required>
           <label for="fname">PROTEIN:</label>
-          <input type="text" id="fname" name="fname">
-          <label for="fname">MIN PRICE:</label>
-          <input type="text" id="fname" name="fname">
-          <label for="fname">MAX PRICE:</label>
-          <input type="text" id="fname" name="fname">
-        </div>
-        <span>*bread and protein will default to chicken and sliced*</span>
-        <footer>
-          <button type="submit" class="search-button">SUBMIT</button>
-        </footer>
-      </form>
+          <input type="text" id="fname" name="fname" required>
+          <label for="fname">PRICE:</label>
+          <input type="text" id="fname" name="fname" required>
+        </form>
+      </div>
+      <span>*bread and protein will default to chicken and sliced*</span>
+      <footer>
+        <a href="" class="create-button">SUBMIT</a>
+      </footer>
     </body>
 </body>
 

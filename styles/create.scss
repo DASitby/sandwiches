@@ -1,4 +1,4 @@
-.search-container {
+.create-container {
   color: #324f3c;
   border: 0.5em solid #324f3c;
   width: 35%;
@@ -17,7 +17,7 @@
   }
 }
 
-.search-button {
+.create-button {
   display:inline-block;
   padding: 0.5em 2em;
   border: 0.2em solid #324f3c;
@@ -38,7 +38,7 @@ span {
   font-size: 1.4em;
 }
 
-.search-button:hover {
+.create-button:hover {
   color:#324f3c;
   background-color:#e0e0e0;
   box-shadow: 0.2rem 0.2rem #939393;
