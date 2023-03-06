@@ -6,7 +6,6 @@ router.get('/', (req, res) => {
   req.session.isAdmin = true;
   getListings()
     .then((listings) => {
-      console.log(req.body);
       const templateVars = { listings: listings, cookie: req.headers.cookie };
       res.render('index', templateVars);
     });
