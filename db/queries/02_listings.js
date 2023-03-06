@@ -22,6 +22,22 @@ const getListings = (options = {}) => {
         console.log(err.message);
       });
   }
+  //Favorites Button
+  if (options.user_id) {
+    queryParams.push(options.user_id);
+    queryString += `
+    JOIN favorites ON listing_id = listings.id
+    WHERE  favorites.user_id = $${queryParams.length}
+    ORDER BY RANDOM()
+    LIMIT 9`;
+    return db.query(queryString, queryParams)
+      .then(data => {
+        return data.rows;
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }
 
   const checkWhere = (string) => {
     if (string.length === 117) {
