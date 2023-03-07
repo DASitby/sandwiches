@@ -1,6 +1,6 @@
 $(() => {
   $('.favorite-btn').on('click', (event) => {
-    event.preventDefault();
-    $.post('/favorites/:id');
+    let listingID = event.target.baseURI.substring(31);
+    $.post(`/favorites/:${listingID}`);
   });
 });
