@@ -4,4 +4,3 @@ $(() => {
     $.post('/favorites/:id');
   });
 });
-i go
