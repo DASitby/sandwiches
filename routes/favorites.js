@@ -1,8 +1,8 @@
 const express = require('express');
 const router  = express.Router();
-const { createFavorite } = require('../db/queries/05_createFavorite.js');
+const { checkFavorite, createFavorite } = require('../db/queries/05_createFavorite.js');
 const { getListings } = require('../db/queries/02_listings.js');
-
+const getSandwich = require('../db/queries/03_product.js');
 
 router.get('/', (req, res) => {
   //Parse cookie for user_id
@@ -24,9 +24,8 @@ router.get('/', (req, res) => {
     });
 });
 
-router.post('/', (req, res) => {
-  let path = req.headers.referer;
-  let listingID = Number(path.substring(31));
+router.post('/:id', (req, res) => {
+  let sandwichID = req.params.id;
   let user_id;
   let cookieArray = req.headers.cookie.split(" ");
   for (let i = 0; i < cookieArray.length; i++) {
@@ -35,7 +34,21 @@ router.post('/', (req, res) => {
       user_id = Number(userArray[1]);
     }
   }
-  createFavorite(user_id, listingID);
-  res.redirect('back');
+  createFavorite(user_id, sandwichID);
+  getSandwich(sandwichID)
+    .then((sandwich) => {
+      let favorite;
+      checkFavorite(user_id,sandwichID)
+        .then((data) => {
+          if (data.length > 0) {
+            favorite = true;
+          }
+          favorite = false;
+        });
+      const templateVars = { sandwich: sandwich[0], cookie: req.headers.cookie, favorite};
+      console.log(favorite);
+      res.render('product', templateVars);
+    });
+
 });
 module.exports = router;

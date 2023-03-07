@@ -1,6 +1,7 @@
 $(() => {
   $('.favorite-btn').on('click', (event) => {
     event.preventDefault();
-    $.post('/favorites');
+    $.post('/favorites/:id');
   });
 });
+i go
