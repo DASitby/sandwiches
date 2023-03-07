@@ -1,8 +1,9 @@
 const express = require('express');
 const router  = express.Router();
-const { checkFavorite, createFavorite } = require('../db/queries/05_createFavorite.js');
+const { createFavorite } = require('../db/queries/05_createFavorite.js');
+const { checkFavorite } = require('../db/queries/06_checkFavorite.js');
 const { getListings } = require('../db/queries/02_listings.js');
-const getSandwich = require('../db/queries/03_product.js');
+const { getSandwich } = require('../db/queries/03_product.js');
 
 router.get('/', (req, res) => {
   //Parse cookie for user_id
