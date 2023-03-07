@@ -43,12 +43,11 @@
       <section class="product-image-container">
         <img src=<%= sandwich.thumbnail_url %>></img>
 
-          <label class="favorite-btn">
-            <input type="checkbox" id="favorite-btn"/>
-            <i class="glyphicon glyphicon-star-empty"></i>
-            <i class="glyphicon glyphicon-star"></i>
-          </label>
-
+        <% if (favorite === true) {%>
+          <i class="glyphicon glyphicon-star"></i>
+        <% } else { %>
+          <i class="glyphicon glyphicon-star-empty"></i>
+        <% } %>
       </section>
       <section class="product-description-container">
         <ul>
