@@ -15,7 +15,7 @@
   border: 0.5em solid #324f3c;
   width: 75%;
   height: 45em;
-  margin-top: 4.1em;
+  margin-top: 6em;
   display: flex;
   flex-direction: row;
   border-radius: 5em;
@@ -29,6 +29,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 7em;
 
   img {
     height: 35em;
@@ -45,11 +46,11 @@
 
 .product-description-container {
   width: 40%;
-  font-size: 2.4em;
+  font-size: 2.3em;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 2em;
+  margin-right: 3em;
 
   h3 {
     color: #e0e0e0;
@@ -58,6 +59,6 @@
 
 .product-seller-info {
   color: #324f3c;
-  font-size: 1.5em;
+  font-size: 2em;
   margin-top: 0.6em;
 }

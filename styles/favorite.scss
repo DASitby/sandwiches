@@ -1,0 +1,31 @@
+.favorite-btn {
+  margin-left: 2em;
+  position: relative;
+  cursor: pointer;
+  font-size: 5em;
+  padding-bottom: 0.7em;
+}
+
+.favorite-btn .glyphicon {
+  color: #324f3c;
+  position: absolute;
+  left: -1.2em;
+  font-size: 0.75em;
+}
+
+.favorite-btn .glyphicon-star-empty {
+  color: #324f3c;
+}
+
+.favorite-btn .glyphicon-star {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.favorite-btn input[type="checkbox"]:checked ~ .glyphicon-star {
+  opacity: 1;
+}
+
+label input[type="checkbox"] {
+  display: none;
+}

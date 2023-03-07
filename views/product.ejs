@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="/styles/header.css" />
   <link rel="stylesheet" href="/styles/listings.css" />
   <link rel="stylesheet" href="/styles/product.css" />
+  <link rel="stylesheet" href="/styles/favorite.css" />
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
@@ -29,6 +30,8 @@
 
   <!-- Icons CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- HTML page content -->
 <body>
@@ -39,6 +42,13 @@
     <div class="product-container">
       <section class="product-image-container">
         <img src=<%= sandwich.thumbnail_url %>></img>
+
+          <label class="favorite-btn">
+            <input type="checkbox" id="favorite-btn"/>
+            <i class="glyphicon glyphicon-star-empty"></i>
+            <i class="glyphicon glyphicon-star"></i>
+          </label>
+
       </section>
       <section class="product-description-container">
         <ul>
