@@ -1,13 +1,13 @@
 const db = require('../connection');
 
-const createFavorite = (userID,listing) => {
+const createFavorite = (userID,listingID) => {
   return db.query(
     `INSERT INTO favorites (
       user_id, listing_id)
      VALUES ($1, $2)
      RETURNING *;`,
     [userID,
-      listing.id])
+      listingID])
     .then(data => {
       return data.rows;
     })

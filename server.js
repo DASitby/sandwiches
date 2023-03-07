@@ -36,6 +36,7 @@ const productRoutes = require('./routes/product');
 const createRoutes = require('./routes/create');
 const searchRoutes = require('./routes/search');
 const myListingsRoutes = require('./routes/mine');
+const messagesRoutes = require('./routes/messages');
 const favoritesRoutes = require('./routes/favorites');
 
 // Mount all resource routes
@@ -49,6 +50,7 @@ app.use('/listings/', productRoutes);
 app.use('/create', createRoutes);
 app.use('/search', searchRoutes);
 app.use('/mine', myListingsRoutes);
+app.use('/messages', messagesRoutes);
 app.use('/favorites', favoritesRoutes);
 // Note: mount other resources here, using the same pattern above
 
