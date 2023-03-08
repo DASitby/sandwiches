@@ -51,10 +51,12 @@
               </button>
             <% } %>
 
-            <% if (sandwich.favorite === true) {%>
-                <i class="glyphicon glyphicon-star del-favorite-btn"></i>
-            <% } else { %>
-                <i class="glyphicon glyphicon-star-empty favorite-btn"></i>
+            <% if (cookie.includes('user=true')) { %>
+              <% if (sandwich.favorite === true) {%>
+                  <i class="glyphicon glyphicon-star del-favorite-btn"></i>
+              <% } else { %>
+                  <i class="glyphicon glyphicon-star-empty favorite-btn"></i>
+              <% } %>
             <% } %>
 
           </section>
