@@ -14,24 +14,34 @@ router.get('/:id', (req, res) => {
   let sandwichID = req.params.id;
   let user_id;
   let cookieArray = req.headers.cookie.split(" ");
-  for (let i = 0; i < cookieArray.length; i++) {
-    if (cookieArray[i].includes("user_id")) {
-      let userArray = cookieArray[i].split('=');
-      user_id = Number(userArray[1]);
+
+  cookieArray.forEach(cookie => {
+    const [key, value] = cookie.split('=');
+    if (key === 'user_id') {
+      const numValue = Number(value); // Convert the value to a number
+      if (!isNaN(numValue)) { // Check if the value is a number
+        console.log(`${key} has a number value: ${numValue}`);
+        user_id = numValue;
+      }
     }
-  }
+    if (key === 'admin_id') {
+      const numValue = Number(value); // Convert the value to a number
+      if (!isNaN(numValue)) { // Check if the value is a number
+      }
+    }
+  });
   getSandwich(sandwichID)
     .then((sandwich) => {
       let favorite;
       checkFavorite(user_id,sandwichID)
         .then((data) => {
+
           if (data.length > 0) {
             favorite = true;
           } else {
             favorite = false;
           }
           const templateVars = { sandwich: sandwich[0], cookie: req.headers.cookie, favorite};
-          console.log(favorite);
           res.render('product', templateVars);
         });
     });
