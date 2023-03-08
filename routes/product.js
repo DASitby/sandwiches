@@ -30,22 +30,12 @@ router.get('/:id', (req, res) => {
       }
     }
   });
-  getSandwich(sandwichID)
+  getSandwich(sandwichID, user_id)
     .then((sandwich) => {
-      let favorite;
-      checkFavorite(user_id,sandwichID)
-        .then((data) => {
-
-          if (data.length > 0) {
-            favorite = true;
-          } else {
-            favorite = false;
-          }
-          const templateVars = { sandwich: sandwich[0], cookie: req.headers.cookie, favorite};
-          res.render('product', templateVars);
-        });
+      console.log(sandwich);
+      const templateVars = { sandwich: sandwich[0], cookie: req.headers.cookie};
+      res.render('product', templateVars);
     });
-
 });
 
 module.exports = router;

@@ -37,18 +37,10 @@ router.post('/:id', (req, res) => {
     }
   }
   createFavorite(user_id, sandwichID);
-  getSandwich(sandwichID)
+  getSandwich(sandwichID, user_id)
     .then((sandwich) => {
-      let favorite;
-      checkFavorite(user_id,sandwichID)
-        .then((data) => {
-          if (data.length > 0) {
-            favorite = true;
-          }
-          favorite = false;
-        });
-      const templateVars = { sandwich: sandwich[0], cookie: req.headers.cookie, favorite};
-      console.log(favorite);
+      console.log(sandwich);
+      const templateVars = { sandwich: sandwich[0], cookie: req.headers.cookie};
       res.render('product', templateVars);
     });
 });
@@ -64,20 +56,11 @@ router.post('/delete/:id', (req, res) => {
     }
   }
   deleteFavorite(user_id, sandwichID);
-  getSandwich(sandwichID)
+  getSandwich(sandwichID, user_id)
     .then((sandwich) => {
-      let favorite;
-      checkFavorite(user_id,sandwichID)
-        .then((data) => {
-          if (data.length > 0) {
-            favorite = true;
-          }
-          favorite = false;
-        });
-      const templateVars = { sandwich: sandwich[0], cookie: req.headers.cookie, favorite};
-      console.log(favorite);
+      console.log(sandwich);
+      const templateVars = { sandwich: sandwich[0], cookie: req.headers.cookie};
       res.render('product', templateVars);
     });
-
 });
 module.exports = router;
