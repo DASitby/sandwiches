@@ -43,12 +43,21 @@
     <div class="product-container">
       <section class="product-image-container">
         <img src=<%= sandwich.thumbnail_url %>></img>
+          <section class="icons-container">
 
-        <% if (favorite === true) {%>
-            <i class="glyphicon glyphicon-star favorite-btn"></i>
-        <% } else { %>
-            <i class="glyphicon glyphicon-star-empty favorite-btn"></i>
-        <% } %>
+            <% if (cookie.includes('admin=true')) { %>
+              <button style="cursor: pointer;" class="garbage-icon" onclick="window.location='/listings/';">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            <% } %>
+
+            <% if (favorite === true) {%>
+                <i class="glyphicon glyphicon-star favorite-btn"></i>
+            <% } else { %>
+                <i class="glyphicon glyphicon-star-empty favorite-btn"></i>
+            <% } %>
+
+          </section>
 
       </section>
 

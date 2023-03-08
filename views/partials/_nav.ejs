@@ -1,12 +1,11 @@
 <!-- fixed position navigation bar -->
 <nav class="nav-display">
   <div>
-    <button style="cursor: pointer;"class="nav-menu-buttons" onclick="window.location='/';"><i class="fa-solid fa-house"></i></button>
     <span class="nav-title" style="cursor: pointer;" onclick="window.location='/listings/';">WE ONLY SELL SANDWICHES DOT COM 🍞</span>
   </div>
   <div>
   <% if (cookie.includes('admin=true')) { %>
-      <button style="cursor: pointer;"class="nav-menu-buttons" onclick="window.location='/create/';">CREATE LISTING</button>
+      <button style="cursor: pointer;" class="nav-menu-buttons" onclick="window.location='/create/';">CREATE LISTING</button>
       <button style="cursor: pointer;" class="nav-menu-buttons" onclick="window.location='/mine/';">MY LISTINGS</button>
       <button style="cursor: pointer;" class="nav-menu-buttons">MESSAGES</button>
     <% } else { %>
@@ -14,5 +13,6 @@
       <button type="submit" class="nav-menu-buttons">MESSAGES</button>
     <% } %>
       <button type="submit" class="nav-menu-buttons" onclick="window.location='/search/';">SEARCH</button>
+      <button style="cursor: pointer;"class="nav-menu-buttons" onclick="window.location='/';"><i class="fa-solid fa-house"></i></button>
     </div>
     </nav>
