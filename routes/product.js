@@ -33,10 +33,10 @@ router.get('/:id', (req, res) => {
       }
     }
   });
-  getSandwich(sandwichID, user_id)
+  getSandwich(sandwichID, user_id, admin_id)
     .then((sandwich) => {
       console.log(sandwich);
-      const templateVars = { sandwich: sandwich[0], cookie: req.headers.cookie};
+      const templateVars = { sandwich: sandwich[0], cookie: req.headers.cookie, admin_id};
       res.render('product', templateVars);
     });
 });

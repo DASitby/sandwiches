@@ -46,18 +46,18 @@
           <section class="icons-container">
 
             <% if (cookie.includes('admin=true')) { %>
+              <% if (sandwich.admin_id === admin_id) {%>
               <button style="cursor: pointer;" class="garbage-icon" onclick="window.location='/listings/';">
                 <i class="fa-solid fa-trash-can"></i>
               </button>
-            <% } %>
+            <% }} %>
 
             <% if (cookie.includes('user=true')) { %>
               <% if (sandwich.favorite === true) {%>
                   <i class="glyphicon glyphicon-star del-favorite-btn"></i>
               <% } else { %>
                   <i class="glyphicon glyphicon-star-empty favorite-btn"></i>
-              <% } %>
-            <% } %>
+              <% }} %>
 
           </section>
 
