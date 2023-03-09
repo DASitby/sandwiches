@@ -40,17 +40,19 @@
 <body>
   <%- include('partials/_nav') %>
   <% const countSales = () => { %>
-    <% const uniqueSales = [] %>
-    <% for(let i = 0; i > messages.length; i++){ %>
-      <% if (!uniqueSales.includes(messages[i].sale_id)) { %>
-        <% uniqueSales.push(messages[i].sale_id) %>
+    <% let uniqueSaleIDs = [] %>
+    <% let uniqueSales = [] %>
+    <% for(let i = 0; i < messages.length; i++){ %>
+      <% if (!uniqueSaleIDs.includes(messages[i].sale_id)) { %>
+        <% uniqueSaleIDs.push(messages[i].sale_id) %>
+        <% uniqueSales.push(messages[i]) %>
       <% } %>
     <% } %>
     <% return uniqueSales %>
   <% } %>
   <% const getConversation = (sale_id) => { %>
     <% const conversationMessages = [] %>
-    <% for(let i = 0; i > messages.length; i++){ %>
+    <% for(let i = 0; i < messages.length; i++){ %>
       <% if (messages[i].sale_id === sale_id) { %>
         <% conversationMessages.push(messages[i]) %>
       <% } %>
@@ -63,10 +65,13 @@
     <div class="messages-container">
       <section class="sales-container">
         <span>SALES</span>
-        <div class="individual-sales-container">
-          <img class="individual-sales-container-img">
-          <div class="individual-sales-container-description">DESCRIPTION HERE AND IMAGE IN PURPLE</div>
-        </div>
+        <% let uniqueSales = countSales() %>
+        <% for(let i = 0; i < uniqueSales.length; i++) { %>
+          <div class="individual-sales-container">
+            <img class="individual-sales-container-img">
+            <div class="individual-sales-container-description">Sale conversation with User: <%= uniqueSales[i].user_id %> about Listing: <%= uniqueSales[i].listing_id %> </div>
+          </div>
+          <% } %>
         <div class="individual-sales-container">EXAMPLE SALES #2</div>
         <div class="individual-sales-container">EXAMPLE SALES #3</div>
         <div class="individual-sales-container">EXAMPLE SALES #4</div>
