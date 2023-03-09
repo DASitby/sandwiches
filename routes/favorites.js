@@ -1,7 +1,6 @@
 const express = require('express');
 const router  = express.Router();
 const { createFavorite } = require('../db/queries/05_createFavorite.js');
-const { checkFavorite } = require('../db/queries/06_checkFavorite.js');
 const { deleteFavorite } = require('../db/queries/07_deleteFavorite.js');
 const { getListings } = require('../db/queries/02_listings.js');
 const { getSandwich } = require('../db/queries/03_product.js');
