@@ -2,9 +2,10 @@ const db = require('../connection');
 
 const getMessagesAdmin = (ID) => {
   return db.query(
-    `SELECT messages.id as message, sale_id, body, sales.listing_id, sales.user_id, sales.admin_id, admin_is_sender
+    `SELECT messages.id as message, sale_id, body, sales.listing_id, sales.user_id, sales.admin_id, admin_is_sender, listings.title, listings.description, listings.size, listings.gluten_free, listings.vegetarian, listings.protein, listings.bread_type, listings.price, listings.thumbnail_url
      FROM messages
      JOIN sales ON sale_id = sales.id
+     JOIN listings ON sales.listing_id = listings.id
      WHERE sale_id IN (SELECT id FROM sales WHERE admin_id = $1);`
     , [ID])
     .then(data => {
