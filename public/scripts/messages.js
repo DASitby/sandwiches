@@ -18,7 +18,7 @@ $(document).ready(function() {
               $('.messages-conversation-container').append(`<div class="admin-conversation-container">ADMIN: ${message.body}</div>`);
             }
             if (!message.admin_is_sender) {
-              $('.messages-conversation-container').append(`<div class="user-conversation-container">ADMIN: ${message.body}</div>`);
+              $('.messages-conversation-container').append(`<div class="user-conversation-container">USER: ${message.body}</div>`);
             }
           }
         }
