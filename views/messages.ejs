@@ -41,7 +41,7 @@
   <%- include('partials/_nav') %>
   <% const countSales = () => { %>
     <% const uniqueSales = [] %>
-    <% for(let i = 0; i > messages.length; i > 0){ %>
+    <% for(let i = 0; i > messages.length; i++){ %>
       <% if (!uniqueSales.includes(messages[i].sale_id)) { %>
         <% uniqueSales.push(messages[i].sale_id) %>
       <% } %>
@@ -50,7 +50,7 @@
   <% } %>
   <% const getConversation = (sale_id) => { %>
     <% const conversationMessages = [] %>
-    <% for(let i = 0; i > messages.length; i > 0){ %>
+    <% for(let i = 0; i > messages.length; i++){ %>
       <% if (messages[i].sale_id === sale_id) { %>
         <% conversationMessages.push(messages[i]) %>
       <% } %>
