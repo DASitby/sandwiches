@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
   for (let i = 0; i < cookieArray.length; i++) {
     if (cookieArray[i].includes("user_id")) {
       let userArray = cookieArray[i].split('=');
-      user_id = Number(userArray[1]);
+      user_id = userArray[1].substring(0,1);
     }
   }
   const options = {
