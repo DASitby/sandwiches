@@ -29,6 +29,7 @@
   <script defer src="/scripts/app.js"></script>
   <script src="/scripts/favorites.js"></script>
   <script src="/scripts/delete.js"></script>
+  <script src="/scripts/messages.js"></script>
 </head>
 
   <!-- Icons CSS -->
@@ -67,7 +68,7 @@
         <span>SALES</span>
         <% let uniqueSales = countSales() %>
         <% for(let i = 0; i < uniqueSales.length; i++) { %>
-          <div class="individual-sales-container">
+          <div class="individual-sales-container" data-sale-id="<%= uniqueSales[i].sale_id %>">
             <img class="individual-sales-container-img">
             <div class="individual-sales-container-description">Sale conversation with User: <%= uniqueSales[i].user_id %> about Listing: <%= uniqueSales[i].listing_id %> </div>
           </div>
@@ -99,22 +100,6 @@
 
         </section>
         <section class="messages-conversation-container">
-
-          <div class="user-conversation-container">USER: This is a test message from the user in a sales conversation.</div>
-          <div class="admin-conversation-container">ADMIN: This is a test message from the user in a sales conversation.</div>
-          <div class="user-conversation-container">USER: This is a test message from the user in a sales conversation.</div>
-          <div class="admin-conversation-container">ADMIN: This is a test message from the user in a sales conversation.</div>
-          <div class="user-conversation-container">USER: This is a test message from the user in a sales conversation.</div>
-          <div class="admin-conversation-container">ADMIN: This is a test message from the user in a sales conversation.</div>
-          <div class="user-conversation-container">USER: This is a test message from the user in a sales conversation.</div>
-          <div class="admin-conversation-container">ADMIN: This is a test message from the user in a sales conversation.</div>
-          <div class="user-conversation-container">USER: This is a test message from the user in a sales conversation.</div>
-          <div class="admin-conversation-container">ADMIN: This is a test message from the user in a sales conversation.</div>
-          <div class="user-conversation-container">USER: This is a test message from the user in a sales conversation.</div>
-          <div class="admin-conversation-container">ADMIN: This is a test message from the user in a sales conversation.</div>
-          <div class="user-conversation-container">USER: This is a test message from the user in a sales conversation.</div>
-          <div class="admin-conversation-container">ADMIN: This is a test message from the user in a sales conversation.</div>
-          <div class="user-conversation-container">USER: This is a test message from the user in a sales conversation.</div>
 
         </section>
       </div>
