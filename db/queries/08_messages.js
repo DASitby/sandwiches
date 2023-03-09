@@ -5,7 +5,7 @@ const getMessagesAndSales = (ID,userType) => {
     `SELECT messages.id as message, sale_id, body, sales.listing_id, sales.user_id, sales.admin_id, admin_is_sender
      FROM messages
      JOIN sales ON sale_id = sales.id
-     WHERE sale_id IN (SELECT id FROM sales WHERE admin_id = 1);`
+     WHERE sale_id IN (SELECT id FROM sales WHERE $2_id = $1);`
     , [ID, userType])
     .then(data => {
       return data.rows;
