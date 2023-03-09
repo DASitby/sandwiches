@@ -39,7 +39,24 @@
 <!-- HTML page content -->
 <body>
   <%- include('partials/_nav') %>
-
+  <% const countSales = () => { %>
+    <% const uniqueSales = [] %>
+    <% for(let i = 0; i > messages.length; i > 0){ %>
+      <% if (!uniqueSales.includes(messages[i].sale_id)) { %>
+        <% uniqueSales.push(messages[i].sale_id) %>
+      <% } %>
+    <% } %>
+    <% return uniqueSales %>
+  <% } %>
+  <% const getConversation = (sale_id) => { %>
+    <% const conversationMessages = [] %>
+    <% for(let i = 0; i > messages.length; i > 0){ %>
+      <% if (messages[i].sale_id === sale_id) { %>
+        <% conversationMessages.push(messages[i]) %>
+      <% } %>
+    <% } %>
+    <% return conversationMessages %>
+  <% } %>
   <!-- main product container -->
   <body class="product-main">
     <h1>MESSAGES</h1>
