@@ -10,10 +10,9 @@ router.get('/', (req, res) => {
   for (let i = 0; i < cookieArray.length; i++) {
     if (cookieArray[i].includes("admin_id")) {
       let adminArray = cookieArray[i].split('=');
-      admin_id = Number(adminArray[1]);
+      admin_id = adminArray[1].substring(0,1);
     }
   }
-  console.log(admin_id);
   const options = {
     admin_id: admin_id
   };
