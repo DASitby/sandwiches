@@ -5,6 +5,14 @@ VALUES (1, 1, 1);
 INSERT INTO sales (
   listing_id, user_id, admin_id
 )
+VALUES (6, 1, 1);
+INSERT INTO sales (
+  listing_id, user_id, admin_id
+)
+VALUES (11, 1, 1);
+INSERT INTO sales (
+  listing_id, user_id, admin_id
+)
 VALUES (1, 3, 1);
 INSERT INTO sales (
   listing_id, user_id, admin_id
