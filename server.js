@@ -38,6 +38,7 @@ const searchRoutes = require('./routes/search');
 const myListingsRoutes = require('./routes/mine');
 const messagesRoutes = require('./routes/messages');
 const favoritesRoutes = require('./routes/favorites');
+const conversationRoutes = require('./routes/conversation');
 
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
@@ -52,6 +53,7 @@ app.use('/search', searchRoutes);
 app.use('/mine', myListingsRoutes);
 app.use('/messages', messagesRoutes);
 app.use('/favorites', favoritesRoutes);
+app.use('/conversation', conversationRoutes);
 // Note: mount other resources here, using the same pattern above
 
 // Home page
