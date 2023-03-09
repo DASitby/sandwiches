@@ -2,7 +2,7 @@
   color: #324f3c;
   border: 0.5em solid #324f3c;
   width: 75%;
-  height: 45em;
+  height: 52em;
   display: flex;
   flex-direction: row;
   border-radius: 5em;
@@ -12,9 +12,11 @@
   border: 1px solid red;
   width: 50%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 7em;
+  justify-content: left;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 2em;
+  padding-top: 2em;
 }
 
 .listing-display-container {
@@ -43,4 +45,16 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.individual-sales-container {
+  color: #324f3c;
+  border: 0.3em solid #324f3c;
+  width: 96%;
+  height: 5em;
+  border-radius: 1em;
+  margin-block: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
