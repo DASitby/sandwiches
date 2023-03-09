@@ -1,12 +1,26 @@
 const db = require('../connection');
 
-const getMessagesAndSales = (ID,userType) => {
+const getMessagesAdmin = (ID) => {
   return db.query(
     `SELECT messages.id as message, sale_id, body, sales.listing_id, sales.user_id, sales.admin_id, admin_is_sender
      FROM messages
      JOIN sales ON sale_id = sales.id
-     WHERE sale_id IN (SELECT id FROM sales WHERE $2_id = $1);`
-    , [ID, userType])
+     WHERE sale_id IN (SELECT id FROM sales WHERE admin_id = $1);`
+    , [ID])
+    .then(data => {
+      return data.rows;
+    })
+    .catch((err) => {
+      console.log(err.message);
+    });
+};
+const getMessagesUser = (ID) => {
+  return db.query(
+    `SELECT messages.id as message, sale_id, body, sales.listing_id, sales.user_id, sales.admin_id, admin_is_sender
+     FROM messages
+     JOIN sales ON sale_id = sales.id
+     WHERE sale_id IN (SELECT id FROM sales WHERE sale_id = $1);`
+    , [ID])
     .then(data => {
       return data.rows;
     })
@@ -29,4 +43,4 @@ const createMessage = (sale_id,userType,messageBody) => {
     });
 };
 
-module.exports = { getMessagesAndSales, createMessage };
+module.exports = { getMessagesAdmin, getMessagesUser, createMessage };
