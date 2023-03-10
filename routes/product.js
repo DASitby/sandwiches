@@ -57,8 +57,8 @@ router.post('/:id/buy', (req, res) => {
   });
   createSale(sandwichID,user_id)
     .then((sale) => {
-      createMessage(sale.id,false,'Hello, I would like to negotiate purchase of this sandwich!');
-      res.redirect('/messages/');
+      createMessage(sale[0].id,false,'Hello, I would like to negotiate purchase of this sandwich!').then(
+        res.redirect('/messages'));
     });
 });
 
