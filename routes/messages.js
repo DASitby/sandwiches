@@ -7,7 +7,7 @@
 
 const express = require('express');
 const router  = express.Router();
-const { getMessagesAdmin, getMessagesUser } = require('../db/queries/08_messages');
+const { getMessagesAdmin, getMessagesUser, createMessage } = require('../db/queries/08_messages');
 
 router.get('/', (req, res) => {
   let id;
@@ -39,6 +39,28 @@ router.get('/', (req, res) => {
       }
     }
   });
+});
+
+router.post('/:id', (req, res) => {
+  let isAdmin;
+  let cookieArray = req.headers.cookie.split(" ");
+  cookieArray.forEach(cookie => {
+    const [key, value] = cookie.split('=');
+    if (key === 'user_id') {
+      const numValue = Number(value.substring(0,1)); // Convert the value to a number
+      if (!isNaN(numValue)) { // Check if the value is a number
+        isAdmin = false;
+      }
+    }
+    if (key === 'admin_id') {
+      const numValue = Number(value.substring(0,1)); // Convert the value to a number
+      if (!isNaN(numValue)) { // Check if the value is a number
+        isAdmin = true;
+      }
+    }
+  });
+  createMessage(req.params.id, isAdmin, req.body.text)
+    .then(res.redirect('/messages/'));
 });
 
 module.exports = router;
