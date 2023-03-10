@@ -31,12 +31,12 @@ const getMessagesUser = (ID) => {
     });
 };
 
-const createMessage = (sale_id,userType,messageBody) => {
+const createMessage = (sale_id,isAdmin,messageBody) => {
   return db.query(
     `INSERT INTO messages (sale_id, admin_is_sender, body)
-    VALUES ($1, $2, $3')
+    VALUES ($1, $2, $3)
     RETURNING *;
-    `, [sale_id, userType, messageBody])
+    `, [sale_id, isAdmin, messageBody])
     .then(data => {
       return data.rows;
     })
