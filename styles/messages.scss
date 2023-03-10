@@ -168,6 +168,10 @@
   padding-top: 0.6em;
 }
 
+.messages-text-enter:hover {
+  box-shadow: 0.2rem 0.2rem #939393;
+}
+
 .message-and-button-container {
   display: flex;
   justify-content: center;
