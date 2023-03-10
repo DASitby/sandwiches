@@ -51,12 +51,15 @@ router.post('/delete/:id', (req, res) => {
   let sandwichID = req.params.id;
   let user_id;
   let cookieArray = req.headers.cookie.split(" ");
-  for (let i = 0; i < cookieArray.length; i++) {
-    if (cookieArray[i].includes("user_id")) {
-      let userArray = cookieArray[i].split('=');
-      user_id = Number(userArray[1]);
+  cookieArray.forEach(cookie => {
+    const [key, value] = cookie.split('=');
+    if (key === 'user_id') {
+      const numValue = Number(value.substring(0,1)); // Convert the value to a number
+      if (!isNaN(numValue)) { // Check if the value is a number
+        user_id = numValue;
+      }
     }
-  }
+  });
   deleteFavorite(user_id, sandwichID);
   getSandwich(sandwichID, user_id)
     .then((sandwich) => {
