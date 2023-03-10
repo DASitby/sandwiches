@@ -53,9 +53,15 @@ $(document).ready(function() {
             </ul>
           </section>
             `);
+            $('.message-input-form').html(`
+            <form method="POST" action="/messages/${message.sale_id}">
+              <label for="message-text">Enter message here</label>
+              <textarea name="text" id="message-text"></textarea>
+              <button type="submit">Send</button>
+          </form>
+            `);
           }
         }
-
       },
       error: function(xhr, status, error) {
         // Handle any errors that occur during the AJAX request
