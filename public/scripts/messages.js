@@ -49,7 +49,7 @@ $(document).ready(function() {
               <td><span style="color: #e0e0e0">VEGETARIAN: ${vegetarian}</span></td><br>
               <td><span style="color: #e0e0e0">PROTEIN: ${message.protein}</span></td><br>
               <td><span style="color: #e0e0e0">BREAD: ${message.bread_type}</span></td><br>
-              <td><span style="color: #e0e0e0">PRICE: ${message.price}</span></td>
+              <td><span style="color: #e0e0e0">PRICE: $${message.price / 100}</span></td>
             </ul>
           </section>
             `);
