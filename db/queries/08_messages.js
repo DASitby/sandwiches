@@ -21,7 +21,7 @@ const getMessagesUser = (ID) => {
     FROM messages
     JOIN sales ON sale_id = sales.id
     JOIN listings ON sales.listing_id = listings.id
-     WHERE sale_id IN (SELECT id FROM sales WHERE sale_id = $1);`
+     WHERE sale_id IN (SELECT id FROM sales WHERE user_id = $1);`
     , [ID])
     .then(data => {
       return data.rows;
