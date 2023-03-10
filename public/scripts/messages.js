@@ -56,8 +56,8 @@ $(document).ready(function() {
             $('.message-input-form').html(`
             <form method="POST" action="/messages/${message.sale_id}">
               <label for="message-text">Enter message here</label>
-              <textarea name="text" id="message-text"></textarea>
-              <button type="submit">Send</button>
+              <textarea name="text" id="message-text" class="messages-text-enter"></textarea>
+              <button type="submit" class="messages-send-button">Send</button>
           </form>
             `);
           }

@@ -136,3 +136,32 @@
   justify-content: right;
   align-items: center;
 }
+
+.messages-send-button {
+  font-family: "Bebas Neue";
+  background-color: #324f3c;
+  color: white;
+  border: none;
+  outline: none;
+  height: 2.5em;
+  width: 5em;
+  border-radius: 0.8em;
+  margin-left: 0.3em;
+}
+
+.messages-send-button:hover {
+  box-shadow: 0.2rem 0.2rem #939393;
+}
+
+.messages-text-enter {
+  border: none;
+  background: #324f3c;
+  color: #e0e0e0;
+  width: 32em;
+  height: 2.5em;
+  margin-bottom: 0.7em;
+  resize: none;
+  outline: none;
+  overflow: hidden;
+  border-radius: 0.8em;
+}
