@@ -67,13 +67,19 @@
 }
 
 .individual-sales-container:hover {
-
+  box-shadow: 0.3rem 0.3rem #939393;
+  color: #e0e0e0;
 }
 
 .individual-sales-container-img {
   height: 4em;
   width: 4em;
   border-radius: 4em;
+}
+
+.individual-sales-container-img:hover {
+  scale: 95%;
+  filter: brightness(90%);
 }
 
 .individual-sales-container-description {
@@ -83,7 +89,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 1em;
 }
 
 .messages-image-container {
