@@ -66,15 +66,17 @@
   align-items: center;
 }
 
+.individual-sales-container:hover {
+
+}
+
 .individual-sales-container-img {
-  border: 1px solid purple;
   height: 4em;
   width: 4em;
-  border-radius: 1em;
+  border-radius: 4em;
 }
 
 .individual-sales-container-description {
-  border: 1px solid yellow;
   height: 4em;
   width: 36em;
   border-radius: 1em;
@@ -85,9 +87,9 @@
 }
 
 .messages-image-container {
-  border: 0.2em solid #324f3c;
-  width: 30%;
-  height: 70%;
+  border: 0.1em solid #324f3c;
+  width: 32%;
+  height: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,21 +97,21 @@
   margin-left: 1em;
 
   img {
-    height: 5em;
-    width: 5em;
-    border-radius: 3em;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.8em;
   }
 
   img:hover {
-    box-shadow: 0.3rem 0.3rem #324f3c;
     filter: brightness(90%);
     transition: all 0.3s;
   }
 }
 
 .listing-description-container {
-  width: 55%;
-  font-size: 0.6em;
+  margin-top: 1em;
+  width: 60%;
+  font-size: 0.5em;
   display: flex;
   justify-content: left;
   align-items: center;
