@@ -63,12 +63,13 @@
     <h1>MESSAGES</h1>
     <div class="messages-container">
       <section class="sales-container">
-        <span>SALES</span>
+        <span class="sales-title">SALES</span>
         <% let uniqueSales = countSales() %>
         <% for(let i = 0; i < uniqueSales.length; i++) { %>
           <div class="individual-sales-container" data-sale-id="<%= uniqueSales[i].sale_id %>">
             <img class="individual-sales-container-img" src="<%= uniqueSales[i].thumbnail_url %>"">
-            <div class="individual-sales-container-description">Sale conversation with User: <%= uniqueSales[i].user_id %> about Listing: <%= uniqueSales[i].listing_id %> </div>
+            <div class="individual-sales-container-description">SANDWICH SALE CONVERSATION: <%= uniqueSales[i].user_id %><br>
+              SANDWICH LISTING: <%= uniqueSales[i].listing_id %> </div>
           </div>
           <% } %>
       </section>
@@ -76,14 +77,12 @@
       <div class="right-side-messages">
         <section class="listing-display-container">
           </section>
-
-        </section>
+          </section>
+        <span class="messenger-title">MESSENGER</span>
         <section class="messages-conversation-container">
-
-        </section>
+          </section>
         <section class="message-input-form">
-
-        </section>
+          </section>
       </div>
 
     </div>

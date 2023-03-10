@@ -37,7 +37,7 @@
 .messages-conversation-container {
   width: 100%;
   height: 60%;
-  font-size: 2.3em;
+  font-size: 2.7em;
   display: flex;
   justify-content:flex-start;
   align-items: center;
@@ -66,28 +66,35 @@
   align-items: center;
 }
 
+.individual-sales-container:hover {
+  box-shadow: 0.3rem 0.3rem #939393;
+  color: #e0e0e0;
+}
+
 .individual-sales-container-img {
-  border: 1px solid purple;
   height: 4em;
   width: 4em;
-  border-radius: 1em;
+  border-radius: 4em;
+}
+
+.individual-sales-container-img:hover {
+  scale: 95%;
+  filter: brightness(90%);
 }
 
 .individual-sales-container-description {
-  border: 1px solid yellow;
   height: 4em;
   width: 36em;
   border-radius: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 1em;
 }
 
 .messages-image-container {
-  border: 0.2em solid #324f3c;
-  width: 30%;
-  height: 70%;
+  border: 0.1em solid #324f3c;
+  width: 32%;
+  height: 84%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,37 +102,112 @@
   margin-left: 1em;
 
   img {
-    height: 5em;
-    width: 5em;
-    border-radius: 3em;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.8em;
   }
 
   img:hover {
-    box-shadow: 0.3rem 0.3rem #324f3c;
     filter: brightness(90%);
     transition: all 0.3s;
   }
 }
 
 .listing-description-container {
-  width: 55%;
-  font-size: 0.6em;
+  margin-top: 1em;
+  width: 60%;
+  font-size: 0.5em;
   display: flex;
   justify-content: left;
   align-items: center;
 }
 
 .user-conversation-container {
-  width: 96%;
+  width: 90%;
   height: 6%;
   font-size: 0.4em;
 }
 
 .admin-conversation-container {
-  width: 96%;
+  width: 90%;
   height: 6%;
   font-size: 0.4em;
   display: flex;
   justify-content: right;
   align-items: center;
+}
+
+.messages-send-button {
+  font-family: "Bebas Neue";
+  background-color: #324f3c;
+  color: white;
+  border: none;
+  outline: none;
+  height: 2.5em;
+  width: 5em;
+  border-radius: 0.8em;
+  margin-left: 0.8em;
+}
+
+.messages-send-button:hover {
+  box-shadow: 0.2rem 0.2rem #939393;
+}
+
+.messages-text-enter {
+  border: none;
+  background: #324f3c;
+  color: #e0e0e0;
+  width: 32em;
+  height: 2.5em;
+  margin-bottom: 0.7em;
+  resize: none;
+  outline: none;
+  overflow: hidden;
+  border-radius: 0.8em;
+  text-indent: 0.8em;
+  padding-top: 0.6em;
+}
+
+.messages-text-enter:hover {
+  box-shadow: 0.2rem 0.2rem #939393;
+}
+
+.message-and-button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.3em;
+}
+
+.messenger-title {
+  font-size: 1.3em;
+  display: flex;
+  justify-content: center;
+  color: #e0e0e0;
+  background: #324f3c;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.7em;
+  border-radius: 0.8em;
+}
+
+.messenger-title:hover {
+  box-shadow: 0.2rem 0.2rem #939393;
+}
+
+.sales-title {
+  font-size: 1.3em;
+  display: flex;
+  justify-content: center;
+  color: #e0e0e0;
+  background: #324f3c;
+  width: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.7em;
+  border-radius: 0.8em;
+}
+
+.sales-title:hover {
+  box-shadow: 0.2rem 0.2rem #939393;
 }
