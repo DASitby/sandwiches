@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: row;
   border-radius: 5em;
+  overflow-y: auto;
 }
 
 .sales-container {
@@ -17,6 +18,7 @@
   flex-direction: column;
   padding-left: 1em;
   padding-top: 1em;
+  overflow-y: auto;
 
   span {
     color:#e0e0e0;
